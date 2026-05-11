@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Restaurant NET — Poctivá moravská kuchyně · Uherské Hradiště</title>
+  <meta name="description" content="Restaurant NET v centru Uherského Hradiště. Polední menu, rodinné oslavy, salónek pro 60 osob. Tradiční moravská kuchyně s ohledem na čerstvost." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       NAVIGACE — fixed glass pill
+  ═══════════════════════════════════════════ -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#top" class="nav__brand">
+        <span class="nav__brand-script">Restaurant</span>
+        <span class="nav__brand-mark">NET</span>
+      </a>
+
+      <nav class="nav__menu" id="navMenu">
+        <a href="#about"     class="nav__link">O nás</a>
+        <a href="#services"  class="nav__link">Akce</a>
+        <a href="#menu"      class="nav__link">Menu</a>
+        <a href="#testimony" class="nav__link">Recenze</a>
+        <a href="#contact"   class="nav__link">Kontakt</a>
+      </nav>
+
+      <a href="tel:+420572552597" class="nav__cta">Rezervovat</a>
+
+      <button class="nav__hamburger" id="hamburger" aria-label="Otevřít menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ═══════════════════════════════════════════
+         HERO — dark dramatic
+    ═══════════════════════════════════════════ -->
+    <section class="hero">
+      <div class="hero__media">
+        <video autoplay muted loop playsinline preload="auto" poster="images/salonek.webp" id="heroVideo">
+          <source src="images/hero.webm" type="video/webm" />
+          <source src="images/hero.mp4"  type="video/mp4" />
+        </video>
+      </div>
+      <div class="hero__overlay"></div>
+
+      <div class="hero__content reveal">
+        <span class="hero__script">Restaurant</span>
+        <h1 class="hero__headline">POCTIVÁ &amp; MORAVSKÁ</h1>
+        <p class="hero__tagline">v srdci Uherského Hradiště</p>
+      </div>
+
+      <!-- Floating dish cards na spodku hera -->
+      <div class="hero__cards" id="heroCards">
+        <article class="dish-tag">
+          <div class="dish-tag__photo" aria-label="Svíčková">[ FOTO ]</div>
+          <div class="dish-tag__body">
+            <h3 class="dish-tag__name">Svíčková na smetaně</h3>
+            <p class="dish-tag__sub">Houskový knedlík, brusinky</p>
+          </div>
+        </article>
+        <article class="dish-tag">
+          <div class="dish-tag__photo">[ FOTO ]</div>
+          <div class="dish-tag__body">
+            <h3 class="dish-tag__name">Smažený sýr</h3>
+            <p class="dish-tag__sub">Brambory, tatarka</p>
+          </div>
+        </article>
+        <article class="dish-tag">
+          <div class="dish-tag__photo">[ FOTO ]</div>
+          <div class="dish-tag__body">
+            <h3 class="dish-tag__name">Pečená kachna</h3>
+            <p class="dish-tag__sub">Zelí, knedlík</p>
+          </div>
+        </article>
+        <article class="dish-tag">
+          <div class="dish-tag__photo">[ FOTO ]</div>
+          <div class="dish-tag__body">
+            <h3 class="dish-tag__name">Tatarský biftek</h3>
+            <p class="dish-tag__sub">100 g, topinky</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         ABOUT
+    ═══════════════════════════════════════════ -->
+    <section class="section section--cream" id="about">
+      <div class="container">
+        <div class="about reveal">
+          <div class="about__media">
+            <div class="about__photo about__photo--lg">
+              <img src="images/salonek.webp" alt="Interiér Restaurantu NET" loading="lazy" />
+            </div>
+            <div class="about__photo about__photo--sm">
+              <img src="images/vstup.webp" alt="Vstup do Restaurantu NET" loading="lazy" />
+            </div>
+          </div>
+
+          <div class="about__text">
+            <span class="eyebrow-script">O nás</span>
+            <h2 class="section-title">Restaurant <em>NET</em></h2>
+            <p class="about__perex">Rodinná restaurace v samém centru Uherského Hradiště u Mariánského náměstí. Vaříme moravskou kuchyni z čerstvých surovin, denně připravujeme polední menu a hostíme rodinné oslavy v našem salónku pro 60 hostů.</p>
+
+            <a href="tel:+420572552597" class="about__phone">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 4l3 0 2 5-2.5 1.5a11 11 0 005 5L14 13l5 2 0 3a2 2 0 01-2 2A16 16 0 014 7a2 2 0 012-2"/>
+              </svg>
+              <span>+420 572 552 597</span>
+            </a>
+
+            <div class="about__stats">
+              <div class="stat">
+                <div class="stat__value" data-count="40">40</div>
+                <div class="stat__label">let zkušeností</div>
+              </div>
+              <div class="stat">
+                <div class="stat__value" data-count="60">60</div>
+                <div class="stat__label">míst v salónku</div>
+              </div>
+              <div class="stat">
+                <div class="stat__value" data-count="708">708</div>
+                <div class="stat__label">recenzí Google</div>
+              </div>
+              <div class="stat">
+                <div class="stat__value" data-count="10000">10 000+</div>
+                <div class="stat__label">spokojených hostů</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         SERVICES — Akce a oslavy
+    ═══════════════════════════════════════════ -->
+    <section class="section section--white" id="services">
+      <div class="container">
+        <header class="section-header reveal">
+          <span class="eyebrow-script">Akce</span>
+          <h2 class="section-title">Pro každou příležitost</h2>
+        </header>
+
+        <div class="services reveal">
+          <article class="service">
+            <div class="service__icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 22h24v18a4 4 0 01-4 4H16a4 4 0 01-4-4z"/>
+                <path d="M8 22h32v-4a2 2 0 00-2-2H10a2 2 0 00-2 2z"/>
+                <path d="M18 16v-4M30 16v-4M24 16v-6"/>
+                <circle cx="24" cy="8" r="2"/>
+              </svg>
+            </div>
+            <h3 class="service__title">Narozeniny &amp; oslavy</h3>
+            <p class="service__text">Náš salónek pro 60 hostů, vlastní catering a obsluha. Postaráme se o vše od menu po dekoraci.</p>
+          </article>
+
+          <article class="service">
+            <div class="service__icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="6" y="14" width="36" height="26" rx="2"/>
+                <path d="M18 14v-4a2 2 0 012-2h8a2 2 0 012 2v4"/>
+                <path d="M6 26h36"/>
+              </svg>
+            </div>
+            <h3 class="service__title">Firemní akce</h3>
+            <p class="service__text">Pracovní snídaně, firemní obědy, večírky a teambuildingy. AV technika, projektor, klimatizace v salónku.</p>
+          </article>
+
+          <article class="service">
+            <div class="service__icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M14 14c0 6 4 11 10 11s10-5 10-11"/>
+                <path d="M24 25v15M16 40h16"/>
+                <path d="M14 14h20"/>
+              </svg>
+            </div>
+            <h3 class="service__title">Svatby</h3>
+            <p class="service__text">Pojme svatební hostinu až pro 60 osob. Připravíme menu na míru — od svatebního koláčku po hlavní chod.</p>
+          </article>
+        </div>
+
+        <div class="services__cta reveal">
+          <p class="services__price">Od <strong>350 Kč / osoba</strong> dle vybraného menu</p>
+          <a href="#contact" class="btn btn--primary">Poptat akci</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         MENU — Specialties
+    ═══════════════════════════════════════════ -->
+    <section class="section section--cream" id="menu">
+      <div class="container">
+        <header class="section-header reveal">
+          <span class="eyebrow-script">Naše menu</span>
+          <h2 class="section-title">Vybrané speciality</h2>
+          <p class="section-lead">Aktuální polední menu najdete dále, zde jsou vlajkové lodě naší kuchyně.</p>
+        </header>
+
+        <div class="menu-grid reveal">
+          <article class="dish-card">
+            <div class="dish-card__photo">[ FOTO: jídlo ]</div>
+            <div class="dish-card__body">
+              <h3 class="dish-card__name">Svíčková na smetaně</h3>
+              <p class="dish-card__sub">Houskový knedlík, brusinky, citron</p>
+              <div class="dish-card__foot">
+                <span class="dish-card__price">289 Kč</span>
+                <a href="#contact" class="dish-card__cta">Rezervovat</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="dish-card">
+            <div class="dish-card__photo">[ FOTO: jídlo ]</div>
+            <div class="dish-card__body">
+              <h3 class="dish-card__name">Pečená kachna</h3>
+              <p class="dish-card__sub">Dušené zelí, bramborový a houskový knedlík</p>
+              <div class="dish-card__foot">
+                <span class="dish-card__price">319 Kč</span>
+                <a href="#contact" class="dish-card__cta">Rezervovat</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="dish-card">
+            <div class="dish-card__photo">[ FOTO: jídlo ]</div>
+            <div class="dish-card__body">
+              <h3 class="dish-card__name">Moravský vrabec</h3>
+              <p class="dish-card__sub">Kysané zelí, houskový knedlík</p>
+              <div class="dish-card__foot">
+                <span class="dish-card__price">269 Kč</span>
+                <a href="#contact" class="dish-card__cta">Rezervovat</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="dish-card">
+            <div class="dish-card__photo">[ FOTO: jídlo ]</div>
+            <div class="dish-card__body">
+              <h3 class="dish-card__name">Grilovaný losos</h3>
+              <p class="dish-card__sub">Bazalkové pesto, vařené brambory, citron</p>
+              <div class="dish-card__foot">
+                <span class="dish-card__price">319 Kč</span>
+                <a href="#contact" class="dish-card__cta">Rezervovat</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="dish-card">
+            <div class="dish-card__photo">[ FOTO: jídlo ]</div>
+            <div class="dish-card__body">
+              <h3 class="dish-card__name">Tatarský biftek</h3>
+              <p class="dish-card__sub">100 g hovězího, opečené topinky, česnek</p>
+              <div class="dish-card__foot">
+                <span class="dish-card__price">189 Kč</span>
+                <a href="#contact" class="dish-card__cta">Rezervovat</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="dish-card">
+            <div class="dish-card__photo">[ FOTO: jídlo ]</div>
+            <div class="dish-card__body">
+              <h3 class="dish-card__name">Rizoto s pečenou zeleninou</h3>
+              <p class="dish-card__sub">Parmazán, čerstvé bylinky <span class="dish-card__tag">vegetariánské</span></p>
+              <div class="dish-card__foot">
+                <span class="dish-card__price">229 Kč</span>
+                <a href="#contact" class="dish-card__cta">Rezervovat</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         DAILY MENU — Polední menu (compact)
+    ═══════════════════════════════════════════ -->
+    <section class="section section--white" id="daily">
+      <div class="container">
+        <header class="section-header reveal">
+          <span class="eyebrow-script">Polední menu</span>
+          <h2 class="section-title">Dnešní nabídka</h2>
+          <p class="section-lead"><span id="todayDate"></span> · ceny 130–160 Kč včetně polévky</p>
+        </header>
+
+        <div class="daily reveal">
+          <div class="daily__list">
+            <div class="daily__row">
+              <span class="daily__name">Indická s masem · Gulášová · Vývar s nudlemi · Česneková</span>
+              <span class="daily__price">polévka</span>
+            </div>
+            <div class="daily__row">
+              <span class="daily__name">Kuřecí Kung Pao <em>· dušená rýže nebo hranolky</em></span>
+              <span class="daily__price">150 Kč</span>
+            </div>
+            <div class="daily__row">
+              <span class="daily__name">Medailonky z vepřové panenky <em>· s parmskou šunkou, opékané brambory</em></span>
+              <span class="daily__price">150 Kč</span>
+            </div>
+            <div class="daily__row">
+              <span class="daily__name">Svíčková na smetaně <em>· houskový knedlík, brusinky</em></span>
+              <span class="daily__price">160 Kč</span>
+            </div>
+            <div class="daily__row">
+              <span class="daily__name">Kapustové lívance <em>· vařené brambory, dip</em> <span class="dish-card__tag">veg</span></span>
+              <span class="daily__price">150 Kč</span>
+            </div>
+            <div class="daily__row">
+              <span class="daily__name">Smažený sýr se šunkou <em>· brambory nebo hranolky</em></span>
+              <span class="daily__price">150 Kč</span>
+            </div>
+          </div>
+
+          <p class="daily__note">Menu se mění denně. Aktuální také na <a href="https://www.menicka.cz/123-restaurant-net-.html" target="_blank" rel="noopener">menicka.cz</a> a Facebooku.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         BANNER — full-width photo with overlay text
+    ═══════════════════════════════════════════ -->
+    <section class="banner reveal">
+      <div class="banner__media">
+        <img src="images/salonek.webp" alt="Atmosféra Restaurantu NET" loading="lazy" />
+      </div>
+      <div class="banner__overlay"></div>
+      <div class="banner__content">
+        <span class="eyebrow-script eyebrow-script--light">Salónek pro 60 hostů</span>
+        <h2 class="banner__title">Oslavte vše, co stojí za to</h2>
+        <p class="banner__text">Vlastní menu, dekorace dle přání, AV technika a klimatizace.</p>
+        <a href="#contact" class="btn btn--gold">Nezávazná poptávka</a>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         TESTIMONY
+    ═══════════════════════════════════════════ -->
+    <section class="section section--cream" id="testimony">
+      <div class="container">
+        <header class="section-header reveal">
+          <span class="eyebrow-script">Spokojení hosté</span>
+          <h2 class="section-title">Co o nás říkají</h2>
+        </header>
+
+        <div class="reviews reveal" id="reviews">
+          <article class="review">
+            <div class="review__quote">&ldquo;</div>
+            <p class="review__text">Chodíme sem na oběd pravidelně a nikdy jsme nebyli zklamáni. Rychlá obsluha, poctivé porce a skvělý poměr cena–kvalita.</p>
+            <div class="review__stars">★★★★★</div>
+            <footer class="review__foot">
+              <div class="review__avatar">LN</div>
+              <div>
+                <div class="review__name">Lucie Novotná</div>
+                <div class="review__src">Google recenze</div>
+              </div>
+            </footer>
+          </article>
+
+          <article class="review">
+            <div class="review__quote">&ldquo;</div>
+            <p class="review__text">Slavili jsme narozeniny v salónku a personál se postaral o vše. Příjemný interiér, ochotná obsluha a jídlo přesně podle přání.</p>
+            <div class="review__stars">★★★★★</div>
+            <footer class="review__foot">
+              <div class="review__avatar">MK</div>
+              <div>
+                <div class="review__name">Martin Kříž</div>
+                <div class="review__src">Google recenze</div>
+              </div>
+            </footer>
+          </article>
+
+          <article class="review">
+            <div class="review__quote">&ldquo;</div>
+            <p class="review__text">Skrytý klenot u Mariánského náměstí. Těžko v Uherském Hradišti najdete takovou kvalitu za tuto cenu. Rozhodně se vrátíme.</p>
+            <div class="review__stars">★★★★☆</div>
+            <footer class="review__foot">
+              <div class="review__avatar">PV</div>
+              <div>
+                <div class="review__name">Petra Vlčková</div>
+                <div class="review__src">Tripadvisor</div>
+              </div>
+            </footer>
+          </article>
+        </div>
+
+        <div class="reviews__rating reveal">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.5 7.1.6-5.4 4.7 1.7 7L12 17.1 5.7 20.8l1.7-7L2 9.1l7.1-.6z"/></svg>
+          <strong>4,2</strong> · 708 recenzí na Google
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         CONTACT
+    ═══════════════════════════════════════════ -->
+    <section class="section section--dark" id="contact">
+      <div class="container">
+        <header class="section-header section-header--light reveal">
+          <span class="eyebrow-script eyebrow-script--light">Kontakt</span>
+          <h2 class="section-title section-title--light">Najdete nás v centru</h2>
+        </header>
+
+        <div class="contact reveal">
+          <div class="contact__col">
+            <h3 class="contact__heading">Adresa</h3>
+            <address class="contact__body">
+              Jindřícha Průchy 310<br />
+              686 01 Uherské Hradiště<br />
+              <span class="contact__hint">u Mariánského náměstí</span>
+            </address>
+
+            <h3 class="contact__heading">Otevírací doba</h3>
+            <table class="hours">
+              <tr><td>Pondělí – Pátek</td><td>9:30 – 23:00</td></tr>
+              <tr><td>Sobota</td><td>11:00 – 23:59</td></tr>
+              <tr><td>Neděle</td><td>dle rezervace</td></tr>
+            </table>
+
+            <h3 class="contact__heading">Stravenky</h3>
+            <ul class="stravenky">
+              <li>Sodexo</li><li>Up</li><li>Edenred</li><li>Pluxee</li>
+            </ul>
+          </div>
+
+          <div class="contact__col">
+            <a href="tel:+420572552597" class="big-btn">
+              <span class="big-btn__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4l3 0 2 5-2.5 1.5a11 11 0 005 5L14 13l5 2 0 3a2 2 0 01-2 2A16 16 0 014 7a2 2 0 012-2"/></svg>
+              </span>
+              <span class="big-btn__label">Zavolejte</span>
+              <span class="big-btn__value">+420 572 552 597</span>
+            </a>
+            <a href="https://wa.me/420572552597" target="_blank" rel="noopener" class="big-btn big-btn--whatsapp">
+              <span class="big-btn__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 01-12.8 6.4L3 20l1.6-5.2A8 8 0 1121 12z"/></svg>
+              </span>
+              <span class="big-btn__label">WhatsApp</span>
+              <span class="big-btn__value">Napište nám zprávu</span>
+            </a>
+
+            <form class="form" action="#" method="post">
+              <h3 class="form__title">Nezávazná poptávka</h3>
+              <div class="form__row">
+                <input type="text" name="jmeno" placeholder="Jméno a příjmení" required class="form__input" />
+                <input type="tel"  name="telefon" placeholder="Telefon" required class="form__input" />
+              </div>
+              <input type="text" name="zprava" placeholder="Vaše zpráva (počet osob, datum, typ akce…)" class="form__input" />
+              <button type="submit" class="btn btn--gold btn--full">Odeslat poptávku</button>
+            </form>
+          </div>
+
+          <div class="contact__map">
+            <iframe
+              src="https://maps.google.com/maps?q=Jind%C5%99%C3%ADcha%20Pr%C5%AFchy%20310%2C%20Uhersk%C3%A9%20Hradi%C5%A1t%C4%9B&t=&z=17&ie=UTF8&iwloc=&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Mapa — Restaurant NET">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__cols">
+        <div class="footer__col">
+          <a href="#top" class="footer__brand">
+            <span class="footer__brand-script">Restaurant</span>
+            <span class="footer__brand-mark">NET</span>
+          </a>
+          <p class="footer__about">Rodinná restaurace v centru Uherského Hradiště. Moravská kuchyně, salónek pro 60 hostů, denní polední menu.</p>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__heading">Navigace</h4>
+          <nav class="footer__links">
+            <a href="#about">O nás</a>
+            <a href="#services">Akce</a>
+            <a href="#menu">Menu</a>
+            <a href="#daily">Polední menu</a>
+            <a href="#contact">Kontakt</a>
+          </nav>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__heading">Kontakt</h4>
+          <a href="tel:+420572552597" class="footer__phone">+420 572 552 597</a>
+          <address class="footer__addr">
+            Jindřícha Průchy 310<br />
+            686 01 Uherské Hradiště
+          </address>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__heading">Otevřeno</h4>
+          <p class="footer__hours">Po–Pá <strong>9:30 – 23:00</strong><br />So <strong>11:00 – 23:59</strong><br />Ne dle rezervace</p>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; 2026 Restaurant NET. Všechna práva vyhrazena.</p>
+        <p>Web vytvořil <strong>Mark Bobčík</strong></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
