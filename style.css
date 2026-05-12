@@ -715,12 +715,12 @@ body::before {
   object-fit: cover;
   display: block;
   /* Unified food photo grading — sjednocuje různé Unsplash zdroje */
-  filter: sepia(.3) saturate(1.05) contrast(1.1) brightness(.9) hue-rotate(-4deg);
+  filter: saturate(1.04) contrast(1.04) brightness(.98);
   transition: transform 1.2s var(--ease-soft), filter .6s var(--ease);
 }
 .dish-card:hover .dish-card__photo img {
   transform: scale(1.06);
-  filter: sepia(.22) saturate(1.12) contrast(1.1) brightness(.98) hue-rotate(-4deg);
+  filter: saturate(1.08) contrast(1.06) brightness(1.02);
 }
 .dish-card__photo::after {
   content: '';
